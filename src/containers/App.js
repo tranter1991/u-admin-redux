@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TodoActions from '../actions';
 import logo from '../logo.svg';
-import '../styles/App.css';
+import '../styles/App.scss';
 import Header from '../components/Header';
 import MainSection from '../components/MainSection'
 
