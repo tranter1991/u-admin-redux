@@ -6,17 +6,21 @@ import logo from '../logo.svg';
 import '../styles/App.scss';
 import Header from '../components/Header';
 import MainSection from '../components/MainSection'
+import { Button } from 'react-bootstrap';
 
 const App = ({todos, actions}) => (
   <div className="App">
     <div className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <h2>Welcome to React</h2>
+      <h2>Welcome to React<span className="glyphicon glyphicon-plus"></span></h2>
     </div>
     
     <p className="App-intro">
       To get started, edit <code>src/App.js</code> and save to reload.
     </p>
+    <div>
+      <Button bsStyle={null} bsSize="large" block className="btn-primary cus ">Block level button</Button>
+    </div>
 
     <div>
         <Header addTodo={actions.addTodo} />
