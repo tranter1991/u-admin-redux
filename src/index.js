@@ -4,8 +4,8 @@ import { createStore, applyMiddleware  } from 'redux'
 import { Provider } from 'react-redux'
 import App from './containers/App';
 import reducer from './reducers'
-import './styles/index.css';
 import thunk from 'redux-thunk';
+import './styles/app.scss';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 store.dispatch({type:'ADD_TODO', text:"你妹的！！"});

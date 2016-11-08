@@ -1,3 +1,4 @@
+
 $bootstrap-sass-asset-helper: true;
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
@@ -6,7 +7,7 @@ $bgcolor: #ccc;
 
 .App {
   text-align: center;
-
+  background:url('./../images/test.png');
 }
 
 .App-logo {
@@ -29,3 +30,13 @@ $bgcolor: #ccc;
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+// 基本样式
+@import "base/base";
+
+// 首页布局
+@import "containers/app";
+
+// point布局
+@import "containers/main_sidebar";

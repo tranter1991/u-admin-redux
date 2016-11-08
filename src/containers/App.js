@@ -3,15 +3,14 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TodoActions from '../actions';
 import logo from '../logo.svg';
-import '../styles/App.scss';
 import Header from '../components/Header';
 import MainSection from '../components/MainSection'
 import { Button } from 'react-bootstrap';
 
 const App = ({todos, actions}) => (
-  <div className="App">
-    <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
+  <div className="app">
+    <div className="app-header">
+      <img src={logo} className="app-logo" alt="logo" />
       <h2>Welcome to React<span className="glyphicon glyphicon-plus"></span></h2>
     </div>
     
