@@ -1,5 +1,78 @@
 $sidebar_panel_bgcolor: #fff;
 
-.sidebar-panel, .sidebar-panel>.brand {
+.sidebar-panel{
+  background-color: $sidebar_panel_bgcolor;
+  -webkit-backface-visibility: hidden;
+  width: 12.5rem;
+  z-index: 1050;
+  & >.brand {
     background-color: $sidebar_panel_bgcolor;
+
+    a{
+      color: #59595A;
+    }
+  }
+
+  & > nav ul {
+    padding: 0;
+    list-style: none;
+    width: 12.5rem;
+    li{
+      position: relative;
+      display: block;
+    }
+    & > li{
+      & > a{
+        display: block;
+        text-align: left;
+        line-height: 1;
+        position: relative;
+        padding: .8125rem 1.563rem;
+        color: #59595A;
+      }
+      & > a:focus, & > a:hover, & > a:active{
+        color: #000;
+        outline-offset: -2px;
+        font-weight: 700;
+        margin-right:3px;
+      }
+    }
+  }
+
+  .small-menu-visible {
+    display: none!important;
+    visibility: hidden;
+  }
+
+}
+.sidebar-panel>nav ul>li>a [class*=" icon-"], .sidebar-panel>nav ul>li>a [class^=icon-] {
+  padding-right: .9375rem;
+  width: 1.875rem;
+  text-align: center;
+}
+
+.brand {
+  position: relative;
+  height: 3.438rem;
+
+  .brand-logo {
+    margin-top: 1.269rem;
+    margin-bottom: 1.269rem;
+    display: inline-block;
+    padding: 0 1.563rem;
+    font-size: .875rem;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .toggle-apps {
+    float: right;
+    padding: 1.094rem 1.563rem;
+  }
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
