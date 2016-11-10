@@ -17,9 +17,33 @@ $sidebar_panel_bgcolor: #fff;
     padding: 0;
     list-style: none;
     width: 12.5rem;
+
+    li.menu-accordion>a::before {
+      box-shadow: 0 0 0 .0625rem rgba(0,0,0,.2);
+      content: '';
+      position: relative;
+      display: inline-block;
+      float: right;
+      margin-left: .3125rem;
+      margin-top: .25rem;
+      width: .375rem;
+      height: .375rem;
+      border-radius: 50%;
+    }
+
     li{
       position: relative;
       display: block;
+
+      ul {
+        max-height: 0;
+        overflow: hidden;
+        display: block;
+        width: auto;
+      }
+      ul li a {
+        padding: .625rem 1.563rem .625rem 3.588rem;
+      }
     }
     & > li{
       & > a{
@@ -30,11 +54,15 @@ $sidebar_panel_bgcolor: #fff;
         padding: .8125rem 1.563rem;
         color: #59595A;
       }
+      & > a[class*=" icon-"], & > a [class^=icon-]{
+        padding-right: 1.2375rem;
+        width: 1.875rem;
+        text-align: center;
+        font-weight: 700;
+      }
+
       & > a:focus, & > a:hover, & > a:active{
         color: #000;
-        outline-offset: -2px;
-        font-weight: 700;
-        margin-right:3px;
       }
     }
   }
@@ -45,12 +73,6 @@ $sidebar_panel_bgcolor: #fff;
   }
 
 }
-.sidebar-panel>nav ul>li>a [class*=" icon-"], .sidebar-panel>nav ul>li>a [class^=icon-] {
-  padding-right: .9375rem;
-  width: 1.875rem;
-  text-align: center;
-}
-
 .brand {
   position: relative;
   height: 3.438rem;
