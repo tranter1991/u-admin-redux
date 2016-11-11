@@ -3,11 +3,17 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import MainSidebar from '../components/mainSidebar/MainSidebar'
-import { Button } from 'react-bootstrap';
+import HeaderBar from './../components/headerBar/HeaderBar'
 
 const App = ({todos, actions}) => (
     <div className="app">
         <MainSidebar/>
+	    <div className="main-panel">
+		    <HeaderBar/>
+		    <div class="main-content">
+			    {this.props.child}
+		    </div>
+	    </div>
     </div>
 );
 

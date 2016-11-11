@@ -9,7 +9,7 @@ export default class Brand extends Component{
         return (
             <div className="brand">
                 <a href="javascript:;" className="toggle-apps hidden-xs">
-                    <i class="icon-grid"></i>
+                    <i className="icon-grid"></i>
                 </a>
                 <div className="toggle-offscreen">
                     <a href="javascript:;" className="visible-xs hamburger-icon">

@@ -1,0 +1,44 @@
+.main-panel {
+	background: #f0f0f0;
+	min-height: 100%;
+
+	.header{
+		padding-left: 12.5rem;
+		// margin-left: -12.5rem;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		background-color: #6164C1;
+		height: 3.438rem;
+		z-index: 1020;
+		border: 0;
+		border-radius: 0;
+
+		.navbar-nav>li{
+			& > a{
+				padding-top: 1.125rem;
+				padding-bottom: 1.125rem;
+				max-height: 3.438rem;
+				color: #fff;
+			}
+			& > a:hover, & >a:focus{
+				background-color: transparent;
+			}
+		}
+	}
+
+
+}
+.main-panel>.header .header-avatar {
+	width: 1.5rem;
+	margin-top: -.1rem;
+}
+
+.nav>li>a>img {
+	max-width: none;
+}
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0;
+}
+

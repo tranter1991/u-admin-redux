@@ -1,100 +1,137 @@
 $sidebar_panel_bgcolor: #fff;
 
-.sidebar-panel{
-  background-color: $sidebar_panel_bgcolor;
-  -webkit-backface-visibility: hidden;
-  width: 12.5rem;
-  z-index: 1050;
-  & >.brand {
-    background-color: $sidebar_panel_bgcolor;
+.sidebar-panel {
+	background-color: $sidebar_panel_bgcolor;
+	-webkit-backface-visibility: hidden;
+	width: 12.5rem;
+	z-index: 1050;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	box-shadow: 0 0 0 .0625rem rgba(0,0,0,.075),0 .0625rem .125rem rgba(0,0,0,.25);
 
-    a{
-      color: #59595A;
-    }
-  }
+	// logo
+	& > .brand {
+		background-color: $sidebar_panel_bgcolor;
+	}
 
-  & > nav ul {
-    padding: 0;
-    list-style: none;
-    width: 12.5rem;
+	// bar全局样式
+	a {
+		color: #59595A;
+	}
 
-    li.menu-accordion>a::before {
-      box-shadow: 0 0 0 .0625rem rgba(0,0,0,.2);
-      content: '';
-      position: relative;
-      display: inline-block;
-      float: right;
-      margin-left: .3125rem;
-      margin-top: .25rem;
-      width: .375rem;
-      height: .375rem;
-      border-radius: 50%;
-    }
+	// 全局菜单样式
+	& > nav ul {
+		padding: 0;
+		list-style: none;
+		width: 12.5rem;
 
-    li{
-      position: relative;
-      display: block;
+		// 统一菜单样式
+		li {
+			position: relative;
+			display: block;
 
-      ul {
-        max-height: 0;
-        overflow: hidden;
-        display: block;
-        width: auto;
-      }
-      ul li a {
-        padding: .625rem 1.563rem .625rem 3.588rem;
-      }
-    }
-    & > li{
-      & > a{
-        display: block;
-        text-align: left;
-        line-height: 1;
-        position: relative;
-        padding: .8125rem 1.563rem;
-        color: #59595A;
-      }
-      & > a[class*=" icon-"], & > a [class^=icon-]{
-        padding-right: 1.2375rem;
-        width: 1.875rem;
-        text-align: center;
-        font-weight: 700;
-      }
+			// 子菜单
+			ul {
+				max-height: 0;
+				overflow: hidden;
+				display: block;
+				width: auto;
+			}
 
-      & > a:focus, & > a:hover, & > a:active{
-        color: #000;
-      }
-    }
-  }
+			ul li a {
+				padding: .625rem 1.563rem .625rem 3.588rem;
+			}
+		}
 
-  .small-menu-visible {
-    display: none!important;
-    visibility: hidden;
-  }
+		// 主菜单样式
+		& > li {
+			& > a {
+				display: block;
+				text-align: left;
+				line-height: 1;
+				position: relative;
+				padding: .8125rem 1.563rem;
+				color: #59595A;
+			}
+			// 主菜单 icon
+			& > a[class*=" icon-"], & > a [class^=icon-] {
+				padding-right: 1.2375rem;
+				width: 1.875rem;
+				text-align: center;
+				font-weight: 700;
+			}
+
+			& > a:focus, & > a:hover, & > a:active {
+				color: #000;
+			}
+
+		}
+
+		// 带有自带单的主菜单
+		li.menu-accordion > a::before {
+			box-shadow: 0 0 0 .0625rem rgba(0, 0, 0, .2);
+			content: '';
+			position: relative;
+			display: inline-block;
+			float: right;
+			margin-left: .3125rem;
+			margin-top: .25rem;
+			width: .375rem;
+			height: .375rem;
+			border-radius: 50%;
+		}
+		.open.menu-accordion > a::before {
+			background: #6164C1;
+			box-shadow: 0 0 0 .0625rem #6164C1;
+		}
+	}
+
+	& > nav{
+		// 子菜单显示
+		.open>ul {
+			max-height: 51.25rem;
+		}
+
+		// 徽章数字
+		.badge {
+			border-radius: .8125rem;
+			padding: .125rem .625rem;
+			color: inherit;
+			border: .0625rem solid #e4e4e4;
+			margin-top: -.125rem;
+			background: #fff;
+		}
+	}
 
 }
+
+// TODO 隐藏响应式brand
+.small-menu-visible {
+	display: none !important;
+	visibility: hidden;
+}
+
+// logo位置
 .brand {
-  position: relative;
-  height: 3.438rem;
+	position: relative;
+	height: 3.438rem;
 
-  .brand-logo {
-    margin-top: 1.269rem;
-    margin-bottom: 1.269rem;
-    display: inline-block;
-    padding: 0 1.563rem;
-    font-size: .875rem;
-    text-transform: uppercase;
-    line-height: 1;
-  }
+	.brand-logo {
+		margin-top: 1.269rem;
+		margin-bottom: 1.269rem;
+		display: inline-block;
+		padding: 0 1.563rem;
+		font-size: .875rem;
+		text-transform: uppercase;
+		line-height: 1;
+	}
 
-  .toggle-apps {
-    float: right;
-    padding: 1.094rem 1.563rem;
-  }
+	.toggle-apps {
+		float: right;
+		padding: 1.094rem 1.563rem;
+	}
 }
 
-.nav {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}

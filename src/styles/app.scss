@@ -43,5 +43,8 @@ $bgcolor: #ccc;
 // 首页布局
 @import "containers/app";
 
-// point布局
+// 左边菜单容器
 @import "containers/main_sidebar";
+
+// 主面板
+@import "containers/main_panel";

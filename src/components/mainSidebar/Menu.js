@@ -9,20 +9,20 @@ export default class Menu extends Component{
                     <li>
                         <a href="index.html">
                             <i className="icon-compass"></i>
-                            <span>Dashboard</span>
+                            <span>仪表盘</span>
                         </a>
                     </li>
                     <li>
                         <a href="http://customizer.nyasha.me/#reactor" target="_blank">
                             <i className="icon-equalizer"></i>
-                            <span>Customize</span>
+                            <span>自定义</span>
                         </a>
                     </li>
                     <li className="menu-accordion">
                         <a href="javascript:;">
                             <span className="badge pull-right">4</span>
                             <i className="icon-drop"></i>
-                            <span>Cards</span>
+                            <span>卡片</span>
                         </a>
                         <ul className="sub-menu">
                             <li>
@@ -47,7 +47,7 @@ export default class Menu extends Component{
                             </li>
                         </ul>
                     </li>
-                    <li className="menu-accordion">
+                    <li className="menu-accordion open">
                         <a href="javascript:;">
                             <i className="icon-cursor"></i>
                             <span>Apps</span>
@@ -304,24 +304,6 @@ export default class Menu extends Component{
                             <li>
                                 <a href="charts-c3js.html">
                                     <span>C3js</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="menu-accordion">
-                        <a href="javascript:;">
-                            <i className="icon-pointer"></i>
-                            <span>Maps</span>
-                        </a>
-                        <ul className="sub-menu">
-                            <li>
-                                <a href="maps-google.html">
-                                    <span>Google</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="maps-vector.html">
-                                    <span>Vector</span>
                                 </a>
                             </li>
                         </ul>
