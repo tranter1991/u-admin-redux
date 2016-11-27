@@ -5,17 +5,21 @@ import { connect } from 'react-redux';
 import MainSidebar from '../components/mainSidebar/MainSidebar'
 import HeaderBar from './../components/headerBar/HeaderBar'
 
+import * as TodoActions from '../actions';
+
+
 const App = ({todos, actions}) => (
     <div className="app">
         <MainSidebar/>
 	    <div className="main-panel">
 		    <HeaderBar/>
-		    <div class="main-content">
-			    {this.props.child}
+		    <div className="main-content">
+
 		    </div>
 	    </div>
     </div>
 );
+
 
 App.propTypes = {
   todos: PropTypes.array.isRequired,
@@ -27,15 +31,7 @@ const mapStateToProps = state =>({
 })
 
 const mapDispatchToProps = dispath =>({
-    actions: {}
+    actions: bindActionCreators(TodoActions, dispath)
 })
-
-// class App extends Component {
-//   render() {
-//     return (
-      
-//     );
-//   }
-// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
