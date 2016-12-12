@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import _todos from './todos'
 
 // TODO 可用es7 export-form 简化

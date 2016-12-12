@@ -8,17 +8,17 @@ import HeaderBar from './../components/headerBar/HeaderBar'
 import * as TodoActions from '../actions';
 
 
-const App = ({todos, actions}) => (
+const App = ({todos, actions, children}) => (
     <div className="app">
         <MainSidebar/>
 	    <div className="main-panel">
 		    <HeaderBar/>
 		    <div className="main-content">
-
+                {children}
 		    </div>
 	    </div>
     </div>
-);
+)
 
 
 App.propTypes = {
@@ -26,8 +26,9 @@ App.propTypes = {
   actions: PropTypes.object.isRequired
 }
 
-const mapStateToProps = state =>({
-    todos: state.todos
+const mapStateToProps = (state, props) =>({
+    todos: state.todos,
+    children: props.children
 })
 
 const mapDispatchToProps = dispath =>({

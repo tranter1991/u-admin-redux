@@ -7,9 +7,11 @@ import React, { Component, PropTypes } from 'react'
 
 export default class Content1 extends Component {
 
-    return(){
-        <div>
-            is content 1 ~!!!
-        </div>
+    render(){
+        return (
+            <div>
+                is content 1 ~!!!
+            </div>
+        )
     }
 }

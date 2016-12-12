@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { Link, browserHistory } from 'react-router'
 
 export default class Menu extends Component{
 
@@ -7,16 +8,16 @@ export default class Menu extends Component{
             <nav role="navigation">
                 <ul className="nav">
                     <li>
-                        <a href="index.html">
+                        <Link to="/">
                             <i className="icon-compass"></i>
                             <span>仪表盘</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="http://customizer.nyasha.me/#reactor" target="_blank">
+                        <Link to="/about">
                             <i className="icon-equalizer"></i>
                             <span>自定义</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="menu-accordion">
                         <a href="javascript:;">
